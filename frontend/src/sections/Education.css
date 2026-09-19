@@ -1,0 +1,120 @@
+.education {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 30px;
+}
+
+.education-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  color: #60a5fa;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.education h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.education h2 span {
+  color: #3b82f6;
+}
+
+.education-intro {
+  max-width: 650px;
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.education-card {
+  display: flex;
+  gap: 40px;
+
+  padding: 35px;
+
+  background: #0a0f1f;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 14px;
+
+  transition: 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 15px 50px rgba(37, 99, 235, 0.1);
+}
+
+.education-year {
+  min-width: 120px;
+
+  color: #60a5fa;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-content h3 {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.education-content h4 {
+  color: #cbd5e1;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.education-specialization {
+  color: #60a5fa !important;
+  font-weight: 600;
+  margin-bottom: 15px !important;
+}
+
+.education-content > p {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.education-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.education-tags span {
+  padding: 6px 10px;
+
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+
+  border-radius: 6px;
+
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 650px) {
+  .education {
+    padding: 80px 20px;
+  }
+
+  .education-card {
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+  }
+}
