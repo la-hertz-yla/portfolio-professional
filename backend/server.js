@@ -13,7 +13,16 @@ const transporter = nodemailer.createTransport({
   },
 });
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://la-hertz-yla.github.io",
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 app.use(express.json());
 
 // Route de test
