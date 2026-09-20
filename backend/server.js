@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -32,7 +33,17 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("/api/contact", async(req, res) => {
+const contactLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  limit: 5,                 // maximum 5 requêtes
+  standardHeaders: "draft-8",
+  legacyHeaders: false,
+  message: {
+    success: false,
+    message: "Too many messages. Please try again later.",
+  },
+});
+app.post("/api/contact", contactLimiter, async (req, res) => {
   const { name, email, message } = req.body;
 
   // Vérification des champs
