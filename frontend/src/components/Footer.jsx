@@ -7,7 +7,7 @@ function Footer() {
 
         <div className="footer-brand">
           <a href="#home" className="footer-logo">
-            LD
+            LC
           </a>
 
           <p className="footer-text">

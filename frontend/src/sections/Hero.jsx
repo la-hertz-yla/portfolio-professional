@@ -1,4 +1,7 @@
+import profileImg from "../assets/profile.jpeg";
 import "./Hero.css";
+
+
 
 function Hero() {
   return (
@@ -31,9 +34,13 @@ function Hero() {
 
       <div className="hero-visual">
         <div className="hero-circle">
-          <span>LD</span>
-        </div>
+        <img
+          src={profileImg}
+          alt="Layla Chmourk"
+          className="hero-profile-img"
+        />
       </div>
+    </div>
     </section>
   );
 }

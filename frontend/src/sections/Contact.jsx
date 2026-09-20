@@ -69,9 +69,11 @@ const handleSubmit = async (e) => {
 
             {/* Email */}
             <a
-              href="mailto:chmourklayla@gmail.com"
-              className="contact-item"
-            >
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=chmourklayla@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+          >
               <span className="contact-icon">@</span>
 
               <div>

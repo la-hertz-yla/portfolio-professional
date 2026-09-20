@@ -14,7 +14,7 @@ function Navbar() {
 
         {/* Logo */}
         <a href="#home" className="navbar-logo" onClick={closeMenu}>
-          LD
+          LC
         </a>
 
         {/* Menu links */}
